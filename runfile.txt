@@ -1,0 +1,13 @@
+run file:
+---------
+yacc -d third.yy
+flex third.lex
+g++ y.tab.c lex.yy.c -lfl -o third
+./third
+
+
+bison -d calc.yy
+flex calc.lex
+g++ -o parser1 lex.yy.c calc.yy.tab.c
+
+
